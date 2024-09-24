@@ -103,7 +103,7 @@ moneyInWallet >= priceIceCream && store
   : console.log(`Мороженого нет!`);
 // Принцып работы так же, как и оператор или, тоько проверка заканчивается на первом же false
 // И, если все типы true, то выведется просто последнее значение.
-*/
+
 
 //Оператор -не- !. !true = false !false = true. Т.е. ! меняет значение логики на противоположную
 console.log(!true); // false
@@ -114,7 +114,7 @@ console.log(!``); // true
 console.log(!0); // true
 
 const name = `Константин`;
-const age = 22;
+const age = 20;
 const hasMuchMoney = true;
 const hasGoodJob = true;
 const hasFreeTime = false;
@@ -128,3 +128,62 @@ if (name !== `Константин`) {
 } else {
   console.log(`Ты наверно очень богат на деньги и тебе это не нужно`);
 }
+
+
+// switch case
+let age = +prompt(`Введите ваш возраст:`);
+switch (true) {
+  case age >= 1 && age <= 125:
+    {
+      console.log(`Ваш возраст ${age}`);
+    }
+    break;
+  default: {
+    console.log(`Нет такого возраста`);
+  }
+}
+
+
+// функции
+// function declaration
+function getAgeType(age) {
+  if ((age >= 1 && age < 125) || age === `number`) {
+    return `Ваш возраст ${age}`;
+  }
+
+  return `Введены некорректные данные`;
+}
+// вызов функции
+
+console.log(getAgeType(`fgrhrbr`));
+console.log(getAgeType(25));
+console.log(getAgeType(-25));
+console.log(getAgeType(225));
+console.log(getAgeType(45));
+
+// function expretion
+const logHello = function () {
+  console.log(`Привет!`);
+};
+logHello();
+// Такую const функцию нельзя переопределить, будет ошибка. Но если объявить через let, то ошибки не будет.
+//так же нельзя вызвать функцию logHello(); до её объявления const logHello = function ()
+
+//стрелочные функции
+const fn1 = () => {
+  return `Я функция fn1`;
+};
+const fn2 = fn1; //Объявление новой переменной с присваиванием значения результата функции переменной fn1
+console.log(fn2()); //Вызов переменной fn2 в виде функции (), которой было присвоено значения результата функции переменной fn1
+*/
+//Передача функции в другие функции называется callback
+// callback
+const logMasseg = (actionBefor, actionAfter) => {
+  //Объявление колбэк функции с 2-мя аргументами
+  actionBefor(); // Объявление аргумента функции logMasseg(), как функции
+  console.log(`Привет!`);
+  actionAfter(); // Объявление аргумента функции logMasseg(), как функции
+};
+const fn1 = () => console.log(`befor`); //Объявление колбэк функций
+const fn2 = () => console.log(`after`); //Объявление колбэк функций
+logMasseg(fn1, fn2); //Вызов функции с присвоенными значениями колбэк функций fn1 и fn2 к аргументам (actionBefor, actionAfter)
