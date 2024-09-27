@@ -226,4 +226,71 @@ const users = (list) => {
 };
 
 users(listUsers);
+
+
+// Поверхностное сравнение объектов
+// Создаем два объекта user1 и user2 с одинаковыми свойствами и значениями
+const user1 = { name: "John", age: 25 };
+const user2 = { name: "John", age: 25 };
+
+// Объявляем функцию arrUsers, которая принимает два объекта в качестве аргументов
+const arrUsers = (objUser1, objUser2) => {
+  // Получаем массивы ключей для каждого объекта
+  const keys1 = Object.keys(objUser1);
+  const keys2 = Object.keys(objUser2);
+
+  // Выводим в консоль количество ключей в первом объекте
+  console.log(`Range user1:`, keys1.length);
+  // Выводим в консоль количество ключей во втором объекте
+  console.log(`Range user2:`, keys2.length);
+
+  // Проверяем, совпадает ли количество ключей в обоих объектах
+  if (keys1.length !== keys2.length) {
+    // Если количество ключей не совпадает, возвращаем false
+    return false;
+  }
+
+  // Проходим по всем ключам первого объекта
+  for (const key in objUser1) {
+    // Проверяем, совпадают ли значения по каждому ключу в обоих объектах
+    if (objUser1[key] !== objUser2[key]) {
+      // Если значения не совпадают, возвращаем false
+      return false;
+    }
+  }
+
+  // Если все ключи и значения совпадают, возвращаем true
+  return true;
+};
+
+// Вызываем функцию arrUsers с объектами user1 и user2 и выводим результат в консоль
+console.log(`равны ли объекты user1 и user2:`, arrUsers(user1, user2));
 */
+
+// рекурсия для глубокого сравнение объектов
+const user1 = { name: "John", age: 25 };
+const user2 = { name: "John", age: 25 };
+
+const arrUsers = (objUser1, objUser2) => {
+  const keys1 = Object.keys(objUser1);
+  const keys2 = Object.keys(objUser2);
+  console.log(`Range user1:`, keys1.length);
+  console.log(`Range user2:`, keys2.length);
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+  for (const keys in objUser1) {
+    const value1 = objUser1[keys];
+    const value2 = objUser2[keys];
+    const arrValueUsers =
+      typeof value1 === "object" && typeof value1 === "object";
+    if (arrValueUsers) {
+      return arrUsers(value1, value2);
+    }
+    if (value1 !== value2) {
+      return false;
+    }
+  }
+  return true;
+};
+console.log(`равны ли объекты user1 и user2:`, arrUsers(user1, user2));
