@@ -515,18 +515,13 @@ console.log(`userName: `, userName); //В консол.лог выводится
 
 //остаточные или рест параметры
 const userInfo = (user) => {
-  const { city, name, age, ...rest } = user;
+  const { city, name, age } = user;
 
-  console.log(
-    `
+  console.log(`
     Name: ${name},
     Age: ${age},
-    City: ${city},
-    Дополнительная информация: ${rest}`
-  ); //City: ${city}, Дополнительная информация: ${rest} Выведется неправильная инфа - Дополнительная информация: [object Object]
-  //если прописать ключ и значение в общих кавычках
-  //Выводить нужно отдельным консол.лог
-  console.log(`Дополнительная информация: `, rest);
+    City: ${city}
+    `);
 };
 
 userInfo({
@@ -534,6 +529,5 @@ userInfo({
   age: 42,
   city: `Kiev`,
   isDeveloper: true,
-  jobPost: `seniuor FullStack`,
   company: `KMDA`,
 });

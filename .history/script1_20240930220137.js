@@ -472,7 +472,7 @@ logAdress3({
   hous: `6`,
   apartment: `17`,
 }); // Такой код считается более надёжным и лучше читается
-
+*/
 
 //Возможность передать сущность, которую вытягиаем из объекта при дистриктуризации
 const user = {
@@ -481,59 +481,3 @@ const user = {
 const admin = {
   name: `Boss`,
 };
-//const {name} = user;
-//const {name} = admin; //такой код вызовет ошибку
-const { name: userName } = user; //Переименование при дистриктуризации
-const { name: adminName } = admin; //если прописать двоеточие и указать другое имя,
-//то именно такое имя будет у конечной переменной, которую мы объявляем
-console.log(`userName:`, userName);
-console.log(`adminName:`, adminName); //В консол.лог выводятся значения
-
-
-const user1 = {
-  name: `Konstantin`,
-  age: 25,
-  city: `Kiev`,
-};
-
-const user2 = {
-  name: `Alexander`,
-  age: 30,
-};
-const { city = `Не указан` } = user2; //Юзер2 не имеет ключа сити. Выведется то, что в кавычках
-//const { city = `Не указан` } = user1; //Выведется значение сити переменной юзер1
-console.log(`City: `, city);
-
-//переименование и задача значения по умолчанию при дистриктуризации
-const user3 = {
-  name: `Konstantin`,
-};
-const { name: userName = `Не указан` } = user3;
-console.log(`userName: `, userName); //В консол.лог выводится значение name
-//Если в переменной будет отсутствовать какой-либо кллюч, то выведется значение по умолчанию
-*/
-
-//остаточные или рест параметры
-const userInfo = (user) => {
-  const { city, name, age, ...rest } = user;
-
-  console.log(
-    `
-    Name: ${name},
-    Age: ${age},
-    City: ${city},
-    Дополнительная информация: ${rest}`
-  ); //City: ${city}, Дополнительная информация: ${rest} Выведется неправильная инфа - Дополнительная информация: [object Object]
-  //если прописать ключ и значение в общих кавычках
-  //Выводить нужно отдельным консол.лог
-  console.log(`Дополнительная информация: `, rest);
-};
-
-userInfo({
-  name: `Konstantin`,
-  age: 42,
-  city: `Kiev`,
-  isDeveloper: true,
-  jobPost: `seniuor FullStack`,
-  company: `KMDA`,
-});
