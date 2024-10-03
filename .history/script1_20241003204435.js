@@ -604,7 +604,7 @@ user2.logName = logInfo;
 
 user1.logName();
 user2.logName();
-
+*/
 
 //Создание калькулятора с помощью методов read() sum() mul()
 const calculate = {
@@ -613,14 +613,13 @@ const calculate = {
       (this.b = +prompt(`Введите второе число: `, 0));
   },
   sum() {
-    return this.a + this.b;
+    rerturn this.a + this.b 
   },
   mul() {
-    return this.a * this.b;
+    return this.a * this.b
   },
 };
 calculate.read();
-console.log(`calculator`, calculate); //Вывод всего содержимого объекта
-console.log(`Сумма: `, calculate.sum());
-console.log(`Произведение: `, calculate.mul());
-*/
+console.log(`calculator`, calculate)
+console.log(`Сумма: `,calculate.sum());
+console.log(`Произведение: `,calculate.mul());

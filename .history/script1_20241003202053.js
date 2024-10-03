@@ -585,12 +585,11 @@ const user = {
   },
 };
 user.logThis();
+*/
 
+const user1 = `Konstantin`;
+const user2 = `Tanya`;
 
-const user1 = { name: `Konstantin` };
-const user2 = { name: `Tanya` };
-
-//Function declaration, чтоб зыс обращался к методу объекта в теле функции
 function logInfo() {
   console.log(`this`, this);
   console.log(`this name`, this.name);
@@ -598,29 +597,8 @@ function logInfo() {
 
 logInfo();
 
-//Присваивание юзер1 и юзер2 новых методов и ссылка на функцию
 user1.logName = logInfo;
 user2.logName = logInfo;
 
 user1.logName();
 user2.logName();
-
-
-//Создание калькулятора с помощью методов read() sum() mul()
-const calculate = {
-  read() {
-    (this.a = +prompt(`Введите первое число: `, 0)), //Промпт всегда приводит к строке. + что бы привести к числу, чтоб не писать метод Number()
-      (this.b = +prompt(`Введите второе число: `, 0));
-  },
-  sum() {
-    return this.a + this.b;
-  },
-  mul() {
-    return this.a * this.b;
-  },
-};
-calculate.read();
-console.log(`calculator`, calculate); //Вывод всего содержимого объекта
-console.log(`Сумма: `, calculate.sum());
-console.log(`Произведение: `, calculate.mul());
-*/

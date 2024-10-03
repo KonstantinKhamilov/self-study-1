@@ -604,7 +604,7 @@ user2.logName = logInfo;
 
 user1.logName();
 user2.logName();
-
+*/
 
 //Создание калькулятора с помощью методов read() sum() mul()
 const calculate = {
@@ -620,7 +620,6 @@ const calculate = {
   },
 };
 calculate.read();
-console.log(`calculator`, calculate); //Вывод всего содержимого объекта
+console.log(`calculator`, calculate);
 console.log(`Сумма: `, calculate.sum());
 console.log(`Произведение: `, calculate.mul());
-*/

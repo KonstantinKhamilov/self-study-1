@@ -604,23 +604,14 @@ user2.logName = logInfo;
 
 user1.logName();
 user2.logName();
+*/
 
-
-//Создание калькулятора с помощью методов read() sum() mul()
-const calculate = {
+//Создание калькулятора с помощью методов read() sum() null()
+const cdlculate = {
   read() {
     (this.a = +prompt(`Введите первое число: `, 0)), //Промпт всегда приводит к строке. + что бы привести к числу, чтоб не писать метод Number()
       (this.b = +prompt(`Введите второе число: `, 0));
   },
-  sum() {
-    return this.a + this.b;
-  },
-  mul() {
-    return this.a * this.b;
-  },
+  sum() {},
+  null() {},
 };
-calculate.read();
-console.log(`calculator`, calculate); //Вывод всего содержимого объекта
-console.log(`Сумма: `, calculate.sum());
-console.log(`Произведение: `, calculate.mul());
-*/
