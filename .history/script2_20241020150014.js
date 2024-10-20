@@ -285,6 +285,7 @@ console.log(
   arr2
 ); //['H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd']
 console.log(arr2.length); //12
+*/
 
 const value = prompt(`Введите имя: `);
 const name = value.trim().toLowerCase();
@@ -296,4 +297,3 @@ if (name.includes(`админ`) || name.includes(`admin`)) {
 } else {
   console.log(`Привет, ${value}!!!`);
 }
-*/

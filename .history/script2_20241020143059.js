@@ -268,11 +268,11 @@ console.log(
   `Применение регулярных выражений / /gi, вместо replaceAll(): `,
   messageFormated
 ); // Я изучаю фронтенд, но пока мало знаю про фронтенд
-
+*/
 
 // Метод split() позволяет разбить строку на массив по указанному разделителю
 const str = `Hello, world`;
-const arr = str.split(", ");
+const arr = str.split("_ ");
 const arr2 = str.split("");
 console.log(str); // ["Hello", "world"]
 console.log(
@@ -285,15 +285,3 @@ console.log(
   arr2
 ); //['H', 'e', 'l', 'l', 'o', ',', ' ', 'w', 'o', 'r', 'l', 'd']
 console.log(arr2.length); //12
-
-const value = prompt(`Введите имя: `);
-const name = value.trim().toLowerCase();
-if (name === ` `) {
-  console.log(`Вы не ввели имя`);
-}
-if (name.includes(`админ`) || name.includes(`admin`)) {
-  console.log(`Запрещенно входить под этим именем!!!`);
-} else {
-  console.log(`Привет, ${value}!!!`);
-}
-*/
