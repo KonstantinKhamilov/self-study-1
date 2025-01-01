@@ -1,4 +1,4 @@
-2; /*let num = {
+let num = {
   step: +prompt(`Введите число: `, 0),
   showStep() {
     console.log(`Текущая ступенька: `, this.step);
@@ -17,7 +17,7 @@
 };
 num.showStep().up().down();
 
-
+/*
 //Методы примитивов, числа, объект Math, округление чисел,парсинг чисел из строк
 // Метод toFixed. Преобразует число в строку
 const price = (params) => {

@@ -1,4 +1,5 @@
-2; /*let num = {
+/*
+let num = {
   step: +prompt(`Введите число: `, 0),
   showStep() {
     console.log(`Текущая ступенька: `, this.step);
@@ -267,7 +268,7 @@ console.log(
   `Применение регулярных выражений / /gi, вместо replaceAll(): `,
   messageFormated
 ); // Я изучаю фронтенд, но пока мало знаю про фронтенд
-
+*/
 
 // Метод split() позволяет разбить строку на массив по указанному разделителю
 const str = `Hello, world`;
@@ -295,4 +296,3 @@ if (name.includes(`админ`) || name.includes(`admin`)) {
 } else {
   console.log(`Привет, ${value}!!!`);
 }
-*/
