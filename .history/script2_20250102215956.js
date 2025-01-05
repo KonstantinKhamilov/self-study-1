@@ -1,4 +1,4 @@
-/*let num = {
+2; /*let num = {
   step: +prompt(`Введите число: `, 0),
   showStep() {
     console.log(`Текущая ступенька: `, this.step);

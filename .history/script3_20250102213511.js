@@ -51,50 +51,27 @@ console.log(matrix[1][1]); //5
 
 //ДОБАВЛЕНИЕ И УДАЛЕНИЕ ЭЛЕМЕНТОВ МАССИВА
 //ДОБАВЛЕНИЕ
-//const letters = [`А`, `Б`, `В`];
-//console.log(letters); // А, Б, В
-//console.log(letters.length); // 3
+const letters = [`А`, `Б`, `В`];
+console.log(letters); // А, Б, В
+console.log(letters.length); // 3
 //console.log(letters.push(`Г`, `Д`)); //ДОБАВЛЕНИЕ ЭЛЕМЕНТОВ В КОНЕЦ МАССИВА
-//console.log(letters); //А, Б, В, Г, Д
-//console.log(letters.length); // 5
-//console.log(letters.unshift(`Г`, `Д`)); //ДОБАВЛЕНИЕ ЭЛЕМЕНТОВ В НАЧАЛО МАССИВА
-//console.log(letters); //Г, Д, А, Б, В
+console.log(letters); //А, Б, В, Г, Д
+console.log(letters.length); // 5
+console.log(letters.unshift(`Г`, `Д`)); //ДОБАВЛЕНИЕ ЭЛЕМЕНТОВ В НАЧАЛО МАССИВА
+console.log(letters); //Г, Д, А, Б, В
 //УДАЛЕНИЕ
-//console.log(letters.pop()); //УДАЛЕНИЕ ЭЛЕМЕНТОВ С КОНЦА МАССИВА. Т.К. рор ОБЁРНУТ В КОНСОЛ.ЛОГ, ТО УДАЛЁННЫЙ ЭЛЕМЕНТ ОТОБРАЗИТСЯ В КОНСОЛИ
+console.log(letters.pop()); //УДАЛЕНИЕ ЭЛЕМЕНТОВ С КОНЦА МАССИВА. Т.К. рор ОБЁРНУТ В КОНСОЛ.ЛОГ, ТО УДАЛЁННЫЙ ЭЛЕМЕНТ ОТОБРАЗИТСЯ В КОНСОЛИ
 //console.log(letters); //А, Б, В, Г, Д
 //console.log(letters.length); // 5
-//console.log(letters.shift()); //УДАЛЕНИЕ ЭЛЕМЕНТОВ С НАЧАЛА МАССИВА
+console.log(letters.shift()); //УДАЛЕНИЕ ЭЛЕМЕНТОВ С НАЧАЛА МАССИВА
 //console.log(letters); //Г, Д, А, Б, В
-//ПРИВЕДЕНИЕ МАССИВА К СТРОКЕ   toString. ПРИМЕНЯЕТСЯ РЕДКО
-let arr = [
+//ПРИВЕДЕНИЕ МАССИВА К СТРОКЕ   toString
+const arr = [
   `Привет`,
   100,
-  200,
-  300,
   true,
   { name: `Konstantin` },
   () => console.log(`Ha - ha`),
   [true, false],
 ];
-//console.log(arr.toString()); //Привет,100,true,[object Object],() => console.log(`Ha - ha`),true,false
-
-//ЧАЩЕ ИСПОЛЬЗУЕТСЯ ДЛЯ СКЛЕИВАНИЯ ЭЛЕМЕНТОВ МАССИВА МЕТОД join
-//console.log(arr.join(`, `)); // Привет, 100, true, [object Object], () => console.log(`Ha - ha`), true,false
-//МЕТОД split МОЖНО ПРИМЕНИТЬ ДЛЯ ПРЕОБРАЗОВАНИЯ СТРОКИ В МАССИВ.
-//split И join МОЖНО ПРИМЕНИТЬ ДЛЯ ПЕРЕБОРА ЧЕГО-ЛИБО
-//ФУНКЦИЯ НА ОБНАРУЖЕНИЕ ЧИСЕЛ В МАССИВЕ ДАННЫХ. МОЖНО ИСПОЛЬЗОВАТЬ ДЛЯ ПРОВЕРКИ ПОЛЕЙ ФОРМ
-const arrSearch = () => {
-  console.log(arr);
-  let arrNum = [];
-  for (const element of arr) {
-    if (typeof element === "number") {
-      arrNum.push(element);
-    }
-  }
-  if (arrNum.length > 0) {
-    return `В массиве есть числа: ${arrNum.join(", ")}`;
-  } else {
-    return `В массиве нет чисел`;
-  }
-};
-console.log(arrSearch());
+console.log(arr.toString());

@@ -82,7 +82,7 @@ let arr = [
 //console.log(arr.join(`, `)); // Привет, 100, true, [object Object], () => console.log(`Ha - ha`), true,false
 //МЕТОД split МОЖНО ПРИМЕНИТЬ ДЛЯ ПРЕОБРАЗОВАНИЯ СТРОКИ В МАССИВ.
 //split И join МОЖНО ПРИМЕНИТЬ ДЛЯ ПЕРЕБОРА ЧЕГО-ЛИБО
-//ФУНКЦИЯ НА ОБНАРУЖЕНИЕ ЧИСЕЛ В МАССИВЕ ДАННЫХ. МОЖНО ИСПОЛЬЗОВАТЬ ДЛЯ ПРОВЕРКИ ПОЛЕЙ ФОРМ
+
 const arrSearch = () => {
   console.log(arr);
   let arrNum = [];
